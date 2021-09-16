@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe Spree::CreditCard, type: :model do
+  it_behaves_like 'metadata'
+
   let(:valid_credit_card_attributes) do
     {
       number: '4111111111111111',

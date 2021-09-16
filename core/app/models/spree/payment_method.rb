@@ -4,6 +4,9 @@ module Spree
     acts_as_list
 
     include MultiStoreResource
+    # include Metadata
+    store :public_metadata, coder: JSON
+    store :private_metadata, coder: JSON
 
     DISPLAY = [:both, :front_end, :back_end].freeze
 

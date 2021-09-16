@@ -5,6 +5,10 @@ module Spree
     MATCH_POLICIES = %w(all any)
     UNACTIVATABLE_ORDER_STATES = ['complete', 'awaiting_return', 'returned']
 
+    # include Metadata
+    store :public_metadata, coder: JSON
+    store :private_metadata, coder: JSON
+
     attr_reader :eligibility_errors, :generate_code
 
     belongs_to :promotion_category, optional: true
