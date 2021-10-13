@@ -22,6 +22,7 @@ module Spree
     include NumberAsParam
     include SingleStoreResource
     include MemoizedData
+    include Metadata
 
     MEMOIZED_METHODS = %w(tax_zone)
 
