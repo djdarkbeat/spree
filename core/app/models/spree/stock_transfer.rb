@@ -4,6 +4,8 @@ module Spree
     include NumberIdentifier
     include NumberAsParam
 
+    include Metadata
+
     has_many :stock_movements, as: :originator
 
     belongs_to :source_location, class_name: 'StockLocation', optional: true
