@@ -4,6 +4,9 @@ module Spree
     include UserAddress
     include UserPaymentSource
     include UserMethods
+    # include Metadata - issue only on 5.2
+    store :public_metadata, coder: JSON
+    store :private_metadata, coder: JSON
 
     self.table_name = 'spree_users'
 
